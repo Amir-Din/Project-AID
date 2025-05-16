@@ -1,0 +1,178 @@
+﻿<Window x:Class="AID.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AID"
+        xmlns:userControls="clr-namespace:AID.View.UserControls"
+        mc:Ignorable="d"
+        Title="Settings"
+        Height="530"
+        Width="400"
+        Icon="/Red-Cross.ico"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow"
+        Loaded="Window_Loaded">
+    <Grid Background="#FFE5E5E5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230" />
+            <RowDefinition />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal">
+            <StackPanel Width="190"
+                        Margin="35,20,0,0">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <ComboBox x:Name="comTimStartHou"
+                              Style="{StaticResource RoundComboBox}"
+                              Width="50"
+                              Margin="0,5,5,0">
+                        <ComboBoxItem x:Name="comitTimStartHou0">0</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou1">1</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou2">2</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou3">3</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou4">4</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou5">5</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou6">6</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou7">7</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou8">8</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou9">9</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou10">10</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou11">11</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou12">12</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou13">13</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou14">14</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou15">15</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou16">16</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou17">17</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou18">18</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou19">19</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou20">20</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou21">21</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou22">22</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartHou23">23</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content=":"
+                           FontSize="25" />
+                    <ComboBox x:Name="comTimStartMin"
+                              Style="{StaticResource RoundComboBox}"
+                              Width="50"
+                              Margin="5,5,0,0">
+                        <ComboBoxItem x:Name="comitTimStartMin00">00</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartMin15">15</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartMin30">30</ComboBoxItem>
+                        <ComboBoxItem x:Name="comitTimStartMin45">45</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <userControls:NumericUpDown x:Name="NumPosVisDur"
+                                            Width="160"
+                                            Height="35"
+                                            Margin="0,15,0,0"
+                                            MaxNum="60"
+                                            Number="5" />
+                <userControls:NumericUpDown x:Name="NumVisNum"
+                                            Number="1"
+                                            MaxNum="16"
+                                            Width="160"
+                                            Height="35"
+                                            Margin="0,15,0,0" />
+                <ComboBox x:Name="comDaysOff"
+                          Style="{StaticResource RoundComboBox}"
+                          Width="160"
+                          Margin="0,15,0,0"
+                          SelectionChanged="comDaysOff_SelectionChanged">
+                    <ComboBoxItem x:Name="comItemSat"
+                                  Selected="comDaysOff_Selected">
+                        <CheckBox x:Name="chbxSat"
+                                  Style="{StaticResource mychbx}"
+                                  Content="شنبه" />
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Name="comItemSun"
+                                  Selected="comDaysOff_Selected">
+                        <CheckBox x:Name="chbxSun"
+                                  Style="{StaticResource mychbx}"
+                                  Content="یکشنبه" />
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Name="comItemMon"
+                                  Selected="comDaysOff_Selected">
+                        <CheckBox x:Name="chbxMon"
+                                  Style="{StaticResource mychbx}"
+                                  Content="دوشنبه" />
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Name="comItemTue"
+                                  Selected="comDaysOff_Selected">
+                        <CheckBox x:Name="chbxTue"
+                                  Style="{StaticResource mychbx}"
+                                  Content="سه شنبه" />
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Name="comItemWed"
+                                  Selected="comDaysOff_Selected">
+                        <CheckBox x:Name="chbxWed"
+                                  Style="{StaticResource mychbx}"
+                                  Content="چهارشنبه" />
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Name="comItemThu"
+                                  Selected="comDaysOff_Selected">
+                        <CheckBox x:Name="chbxThu"
+                                  Style="{StaticResource mychbx}"
+                                  Content="پنجشنبه" />
+                    </ComboBoxItem>
+                    <ComboBoxItem x:Name="comItemFri"
+                                  Selected="comDaysOff_Selected">
+                        <CheckBox x:Name="chbxFri"
+                                  Style="{StaticResource mychbx}"
+                                  Content="جمعه" />
+                    </ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Width="175">
+                <Label Style="{StaticResource lblSet}"
+                       Content=":ساعت شروع به کار"
+                       Margin="0,20,20,0" />
+                <Label Style="{StaticResource lblSet}"
+                       Content=":مدت زمان تقربی هر ویزیت"
+                       Margin="0,30,0,5"
+                       FontSize="14"
+                       FontWeight="Bold"
+                       Width="178"
+                       Padding="0,0,20,0" />
+                <Label Style="{StaticResource lblSet}"
+                       Content=":تعداد ویزیت در روز" />
+                <Label Style="{StaticResource lblSet}"
+                       Content=":روز های تعطیل مطب"
+                       FontSize="16"
+                       Margin="0,15,20,5" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button x:Name="btnSetCharity"
+                        Style="{StaticResource btnSetting}"
+                        Content="تنظیمات خیریه"
+                        Click="btnSetCharity_Click" />
+                <Button x:Name="btnSetUserInfo"
+                        Style="{StaticResource btnSetting}"
+                        Content="تغییر اطلاعات کاربر" 
+                        Click="btnSetUserInfo_Click"/>
+            </StackPanel>
+            <Button x:Name="btnDaysOff"
+                    Style="{StaticResource btnSetting}"
+                    Content="روز های تعطیل"
+                    Click="btnDaysOff_Click" />
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Button x:Name="btnSetter"
+                    Style="{StaticResource RoundButAcc}"
+                    Content="ذخیره"
+                    FontSize="25"
+                    Width="280"
+                    Height="70"
+                    Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

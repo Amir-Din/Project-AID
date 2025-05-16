@@ -1,0 +1,133 @@
+﻿<Window x:Class="AID.AddPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AID"
+        mc:Ignorable="d"
+        Title="AddPatient"
+        Height="530"
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow">
+    <Grid Background="#FFE5E5E5">
+        <StackPanel x:Name="stac">
+            <StackPanel Orientation="Horizontal"
+                        Margin="35,30,0,8">
+                <TextBox x:Name="txtNF"
+                         Text=""
+                         Style="{StaticResource RoundTextBox}" />
+                <Label Content=":نام و نام خانوادگی"
+                       FontSize="16" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="35,8,0,8">
+                <TextBox x:Name="txtID"
+                         Text=""
+                         FontSize="18"
+                         Style="{StaticResource RoundTextBox}" />
+                <Label Content=":کد ملی"
+                       FontSize="18"
+                       Margin="40,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="35,8,0,8">
+                <TextBox x:Name="txtPN"
+                         Text=""
+                         FontSize="18"
+                         Style="{StaticResource RoundTextBox}" />
+                <Label Content=":شماره همراه"
+                       FontSize="18"
+                       Margin="25,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="40,8,0,8">
+                <ComboBox x:Name="comboInsur"
+                          Style="{StaticResource RoundComboBox}">
+                    <ComboBoxItem x:Name="coItemAzad"
+                                  Content="آزاد"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemTamin"
+                                  Content="بیمه تامین اجتماعی"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemKhadamat"
+                                  Content="بیمه خدمات درمانی"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemMosalah"
+                                  Content="بیمه نیرو های مسلح"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemGardeshgari"
+                                  Content="گردشگری"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemTest"
+                                  Content="عکس و آزمایش"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemTajdid"
+                                  Content="تجدید نسخه"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemFree"
+                                  Content="رایگان"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemTakhfif"
+                                  Content="تخفیف پزشک"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemCharity"
+                                  Content="قرارداد خیریه"
+                                  Selected="coItemCharity_Selected"
+                                  Unselected="coItemCharity_Unselected"></ComboBoxItem>
+                    <ComboBoxItem x:Name="coItemOthers"
+                                  Content="سایر"
+                                  Selected="coItemOthers_Selected"
+                                  Unselected="coItemOthers_Unselected"></ComboBoxItem>
+                </ComboBox>
+                <Label Content=":مبنا محاسبه "
+                       FontSize="18"
+                       Margin="30,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="35,8,0,8"
+                        x:Name="sta">
+                <TextBox x:Name="txtAddress"
+                         Text=""
+                         FontSize="18"
+                         Height="125"
+                         TextWrapping="Wrap"
+                         VerticalContentAlignment="Top"
+                         TextAlignment="Right"
+                         Padding="6"
+                         Style="{StaticResource RoundTextBox}" />
+                <StackPanel Width="165"
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center">
+                    <Label Content=":آدرس"
+                           FontSize="18"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,20,10" />
+                    <TextBlock x:Name="txCharity"
+                               FontSize="15"
+                               Text="نام خیریه"
+                               TextAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               Foreground="Red"
+                               Visibility="Hidden"
+                               Margin="0,10" />
+                    <CheckBox x:Name="checkVisiSearch"
+                              Content=":بیمار قبلی"
+                              Width="100"
+                              Margin="20,10,0,0"
+                              Checked="checkVisiSearch_Checked"
+                              Unchecked="checkVisiSearch_Unchecked">
+                        <CheckBox.LayoutTransform>
+                            <ScaleTransform ScaleX="1.45"
+                                            ScaleY="1.45" />
+                        </CheckBox.LayoutTransform>
+                    </CheckBox>
+                </StackPanel>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0,15,0,0">
+                <Button x:Name="btnAccept"
+                        Click="btnAccept_Click"
+                        Style="{StaticResource RoundButAcc}" />
+                <Button x:Name="btnReject"
+                        Click="btnReject_Click"
+                        Style="{StaticResource RoundButRej}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

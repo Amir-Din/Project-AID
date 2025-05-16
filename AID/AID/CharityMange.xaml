@@ -1,0 +1,59 @@
+﻿<Window x:Class="AID.CharityMange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AID"
+        xmlns:userControls="clr-namespace:AID.View.UserControls"
+        mc:Ignorable="d"
+        Title="CharityMange"
+        Height="425"
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Icon="/Red-Cross.ico"
+        WindowStyle="ToolWindow">
+    <Grid Background="#FFE5E5E5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="1"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Background="White"
+                    Orientation="Horizontal">
+            <Button x:Name="btnAdd"
+                    Content="افزودن"
+                    Click="btnAdd_Click"
+                    Style="{StaticResource btnCharity}"/>
+            <Button x:Name="btnUpdate"
+                    Content="ویرایش"
+                    Click="btnUpdate_Click"
+                    Margin="0,5,5,5"
+                    Style="{StaticResource btnCharity}" />
+            <Button x:Name="btnDelete"
+                    Content="حذف"
+                    Click="btnDelete_Click"
+                    Margin="0,5,7,5"
+                    Style="{StaticResource btnCharity}" />
+            <userControls:TextBox1 x:Name="txtCharity"
+                                   Height="60" 
+                                   Width="220"
+                                   MaxLen="25"
+                                   Placeholder="...عنوان خیریه"
+                                   RtoL="Right"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Background="Gray" />
+        <ListBox x:Name="lstCharity"
+                 Width="400"
+                 Grid.Row="2"
+                 FontSize="20"
+                 SelectionChanged="lstCharity_SelectionChanged"
+                 HorizontalContentAlignment="Center"
+                 Margin="25">
+
+        </ListBox>
+    </Grid>
+</Window>

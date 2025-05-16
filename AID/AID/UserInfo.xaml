@@ -1,0 +1,46 @@
+﻿<Window x:Class="AID.UserInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AID"
+        xmlns:userControls="clr-namespace:AID.View.UserControls"
+        mc:Ignorable="d"
+        Title="UserInfo"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        Icon="/Red-Cross.ico"
+        Height="350"
+        Width="400">
+
+    <StackPanel>
+        <userControls:TextBox1 Width="275"
+                               Height="50"
+                               x:Name="txtUIUsername"
+                               Margin="0,50,0,10"
+                               Placeholder="...نام کاربری" />
+        <userControls:TextBox1 Width="275"
+                               Height="50"
+                               x:Name="txtUIPassword"
+                               Margin="0,20,0,20"
+                               Placeholder="...رمز عبور" />
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button x:Name="btnUIOK"
+                    Width="130"
+                    Height="65"
+                    FontSize="18"
+                    Content="تائید"
+                    Click="btnUIOK_Click"
+                    Style="{StaticResource RoundButAcc}" />
+            <Button x:Name="btnUICancel"
+                    Width="130"
+                    Height="65"
+                    FontSize="18"
+                    Content="لغو"
+                    Click="btnUICancel_Click"
+                    Style="{StaticResource RoundButRej}" />
+        </StackPanel>
+    </StackPanel>
+</Window>

@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="َAddPatientSearch.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="accept.png" />
+    <None Remove="cross.png" />
+    <None Remove="money-back.png" />
+    <None Remove="Next.png" />
+    <None Remove="NextHover.png" />
+    <None Remove="NextVisit.png" />
+    <None Remove="NextVisitHover.png" />
+    <None Remove="Panel.jpg" />
+    <None Remove="PanelHover_thumbnail.png" />
+    <None Remove="Previous.png" />
+    <None Remove="PreviousHover.png" />
+    <None Remove="Red-Cross.ico" />
+    <None Remove="Settings.png" />
+    <None Remove="SettingsHover.png" />
+    <None Remove="Switch.png" />
+    <None Remove="SwitchHover.png" />
+    <None Remove="Untitled.png" />
+    <None Remove="Users.png" />
+    <None Remove="UsersHover.png" />
+    <None Remove="wall-clock.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="َAddPatientSearch.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="accept.png" />
+    <Resource Include="cross.png" />
+    <Resource Include="money-back.png" />
+    <Resource Include="Next.png" />
+    <Resource Include="NextHover.png" />
+    <Resource Include="NextVisit.png" />
+    <Resource Include="NextVisitHover.png" />
+    <Resource Include="Panel.jpg" />
+    <Resource Include="PanelHover_thumbnail.png" />
+    <Resource Include="Previous.png" />
+    <Resource Include="PreviousHover.png" />
+    <Resource Include="Red-Cross.ico" />
+    <Resource Include="Settings.png" />
+    <Resource Include="SettingsHover.png" />
+    <Resource Include="Switch.png" />
+    <Resource Include="SwitchHover.png" />
+    <Resource Include="Untitled.png" />
+    <Resource Include="Users.png" />
+    <Resource Include="UsersHover.png" />
+    <Resource Include="wall-clock.png" />
+  </ItemGroup>
+
+</Project>
